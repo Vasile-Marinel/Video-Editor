@@ -1,11 +1,8 @@
-// Import the functions you need from the SDKs you need
+// firebaseConfig.js
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Configurarea Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyBPwIfCw5eRCFaLnaYxeQBv9-FYWKMwoKQ",
   authDomain: "video-editor-d9816.firebaseapp.com",
@@ -16,7 +13,9 @@ const firebaseConfig = {
   measurementId: "G-FL9R5F71KS"
 };
 
-// Initialize Firebase
+// Inițializarea Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);  // Inițializează autentificarea
-const provider = new GoogleAuthProvider();  // Crează providerul Google
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+export { app, auth, provider };
